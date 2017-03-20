@@ -10,6 +10,10 @@ Data = {
     Kensi: { AbilityScores: {Strength: 8, Dexterity: 14, Constitution: 17, Intelligence: 12, Wisdom: 17, Charisma: 11},
         Profs: ["Arcana", "Deception", "Insight", "Investigation", "Perception", "Religion"],
         Color: {r: 51, g: 238, b: 70}
+    },
+    Bakhul: { AbilityScores: {Strength: 10, Dexterity: 16, Constitution: 14, Intelligence: 18, Wisdom: 11, Charisma: 13},
+        Profs: ["Arcana", "History", "Investigation", "Sleight of Hand"],
+        Color: {r: 106, g: 52, b: 192}
     }
     // Todo: Add other's scores ONCE THEY GIVE THEM TO ME....
 };
