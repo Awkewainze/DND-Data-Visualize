@@ -1,8 +1,9 @@
+Base = { AbilityScores: {Strength: 10, Dexterity: 10, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10},
+    Profs: [],
+    Color: {r: 250, g: 0, b: 0}
+}
+
 Data = {
-    Average: { AbilityScores: {Strength: 10, Dexterity: 10, Constitution: 10, Intelligence: 10, Wisdom: 10, Charisma: 10},
-        Profs: [],
-        Color: {r: 250, g: 0, b: 0}
-    },
     Mara: { AbilityScores: {Strength: 15, Dexterity: 15, Constitution: 16, Intelligence: 11, Wisdom: 13, Charisma: 16},
         Profs: ["Intimidation", "Nature", "Religion", "Survival"],
         Color: {r: 179, g: 181, b: 198}
@@ -14,6 +15,10 @@ Data = {
     Bakhul: { AbilityScores: {Strength: 10, Dexterity: 16, Constitution: 14, Intelligence: 18, Wisdom: 11, Charisma: 13},
         Profs: ["Arcana", "History", "Investigation", "Sleight of Hand"],
         Color: {r: 106, g: 52, b: 192}
+    },
+    Jade: { AbilityScores: {Strength: 10, Dexterity: 17, Constitution: 15, Intelligence: 12, Wisdom: 7, Charisma: 13},
+        Profs: ["Acrobatics", "Deception", "Insight", "Intimidation", "Perception", "Sleight of Hand"],
+        Color: {r: 45, g: 45, b: 45}
     }
     // Todo: Add other's scores ONCE THEY GIVE THEM TO ME....
 };
@@ -80,6 +85,14 @@ function buildSkillDataSet(userData){
     }
 }
 
+function addBaselineData(){
+
+}
+
+function addAverageData(){
+
+}
+
 function makeAbilityGraph(data){
     var abilityData = {
         labels: abilityList,
@@ -95,7 +108,7 @@ function makeAbilityGraph(data){
             scale: {
                 ticks: {
                     suggestedMax: 18,
-                    suggestedMin: 6
+                    suggestedMin: 5
                 }
             }
         }
@@ -116,8 +129,8 @@ function makeSkillGraph(data){
             responsive: false,
             scale: {
                 ticks: {
-                    suggestedMax: 15,
-                    suggestedMin: 8
+                    suggestedMax: 16,
+                    suggestedMin: 6
                 }
             }
         }
@@ -137,6 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
         abilityData.push(userAbilityData);
         skillData.push(userSkillData);
     }
+
+    addAverageData(abilityData, skillData);
+    addBaselineData(abilityData, skillData);
 
     makeAbilityGraph(abilityData);
     makeSkillGraph(skillData);
