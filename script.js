@@ -20,7 +20,7 @@ Data = {
         Profs: ["Acrobatics", "Deception", "Insight", "Intimidation", "Perception", "Sleight of Hand"],
         Color: {r: 45, g: 45, b: 45}
     },
-    Acorn: { AbilityScores: {Strength: 11, Dexterity: 14, Constitution: 11, Intelligence: 12, Wisdom: 16, Charisma: 13},
+    Acorn: { AbilityScores: {Strength: 11, Dexterity: 14, Constitution: 11, Intelligence: 12, Wisdom: 18, Charisma: 13},
         Profs: ["Animal Handling", "Insight", "Nature", "Persuasion", "Survival"],
         Color: {r: 255, g: 153, b: 0}
     }
